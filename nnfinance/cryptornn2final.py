@@ -154,10 +154,10 @@ tensorboard = TensorBoard(log_dir=log_dir)
 filepath = "RNN_Final-{epoch:02d}"
 checkpoint = ModelCheckpoint("models/{}.hd5".format(filepath, monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')) # saves only the best ones
 
-history = model.fit(
-    train_x, train_y, 
-    batch_size=BATCH_SIZE,
-    epochs=EPOCHS,
-    validation_data=(validation_x, validation_y),
-    callbacks=[tensorboard, checkpoint])
+# history = model.fit(
+#     train_x, train_y, 
+#     batch_size=BATCH_SIZE,
+#     epochs=EPOCHS,
+#     validation_data=(validation_x, validation_y),
+#     callbacks=[tensorboard, checkpoint])
 
